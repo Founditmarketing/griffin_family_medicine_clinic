@@ -14,6 +14,7 @@ import { Paperwork } from './pages/Paperwork.tsx';
 import { Reviews } from './pages/Reviews.tsx';
 import { Expertise } from './pages/Expertise.tsx';
 import { Contact } from './pages/Contact.tsx';
+import { DocumentViewer } from './pages/DocumentViewer.tsx';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -41,6 +42,7 @@ export default function App() {
             <Route path="/paperwork" element={<Paperwork />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/forms-viewer" element={<DocumentViewer />} />
           </Routes>
         </main>
         <Footer />
