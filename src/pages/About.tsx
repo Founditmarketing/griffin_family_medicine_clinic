@@ -13,8 +13,13 @@ import imgMeganPaul from '../assets/staff/Megan Paul, NP.png';
 
 export const About = () => {
   return (
-    <div className="pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <div className="pt-32 pb-24 bg-medical-gray bg-dot-grid min-h-screen">
+      {/* Page-level decorative corner accents */}
+      <div className="fixed top-32 left-6 w-16 h-16 border-l-2 border-t-2 border-medical-red/15 rounded-tl-2xl pointer-events-none z-0" />
+      <div className="fixed bottom-16 right-6 w-16 h-16 border-r-2 border-b-2 border-medical-red/15 rounded-br-2xl pointer-events-none z-0" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Intro Header Section */}
         <div className="mb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -81,8 +86,10 @@ export const About = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -10 }}
-              className="premium-card p-10 group"
+              className="premium-card p-10 group relative overflow-hidden"
             >
+              {/* Red accent top bar */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-red/60 via-medical-red to-rose-400/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="mb-6 p-4 bg-medical-gray rounded-2xl w-fit group-hover:bg-medical-red/10 transition-colors duration-500 text-medical-red shadow-sm">
                 {value.icon}
               </div>
@@ -97,15 +104,18 @@ export const About = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-medical-slate rounded-[60px] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-premium"
+          className="bg-medical-slate rounded-[60px] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-premium noise-overlay"
         >
-          {/* Subtle noise and glow */}
+          {/* Subtle glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-medical-red/20 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
-          
+          {/* Decorative background icon */}
           <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
             <History size={400} className="absolute -top-20 -left-20" />
           </div>
+          {/* Red accent lines */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-medical-red/60 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-medical-red/60 to-transparent" />
+
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold mb-8">Our Mission</h2>
             <p className="text-xl md:text-2xl text-white/70 leading-relaxed italic">
@@ -124,7 +134,13 @@ export const About = () => {
           <div className="space-y-16 lg:space-y-24">
             
             {/* Christopher Griffin */}
-            <div className="flex flex-col lg:flex-row gap-10 items-center bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col lg:flex-row gap-10 items-center bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all relative overflow-hidden group"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-red/60 via-medical-red to-rose-400/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="w-full lg:w-1/3 flex-shrink-0">
                 <img src={imgChrisGriffin} alt="Christopher Griffin, M.D." className="w-full h-auto rounded-[32px] object-cover shadow-lg" />
               </div>
@@ -140,10 +156,16 @@ export const About = () => {
                   Book Appointment <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
             {/* Amy Griffin */}
-            <div className="flex flex-col lg:flex-row-reverse gap-10 items-center bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col lg:flex-row-reverse gap-10 items-center bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all relative overflow-hidden group"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-red/60 via-medical-red to-rose-400/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="w-full lg:w-1/3 flex-shrink-0">
                 <img src={imgAmyGriffin} alt="Amy Griffin, M.D." className="w-full h-auto rounded-[32px] object-cover shadow-lg" />
               </div>
@@ -158,10 +180,16 @@ export const About = () => {
                   Book Appointment <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
             {/* Jamie Perrotti */}
-            <div className="flex flex-col lg:flex-row gap-10 items-center bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col lg:flex-row gap-10 items-center bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all relative overflow-hidden group"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-red/60 via-medical-red to-rose-400/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="w-full lg:w-1/3 flex-shrink-0">
                 <img src={imgJamiePerrotti} alt="Jamie Perrotti, PA-C" className="w-full h-auto rounded-[32px] object-cover shadow-lg" />
               </div>
@@ -178,10 +206,16 @@ export const About = () => {
                   Book Appointment <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
             {/* Wesley L. Coleman */}
-            <div className="flex flex-col lg:flex-row-reverse gap-10 items-center bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col lg:flex-row-reverse gap-10 items-center bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all relative overflow-hidden group"
+            >
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-red/60 via-medical-red to-rose-400/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="w-full lg:w-1/3 flex-shrink-0">
                 <img src={imgWesleyColeman} alt="Wesley L. Coleman, MPAS, PA-C" className="w-full h-auto rounded-[32px] object-cover shadow-lg" />
               </div>
@@ -199,30 +233,43 @@ export const About = () => {
                   Book Appointment <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
             {/* Anna Parten & Megan Paul row */}
             <div className="grid md:grid-cols-2 gap-10">
               
               {/* Anna Parten */}
-              <div className="flex flex-col items-center bg-white p-8 md:p-10 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all text-center">
-                <img src={imgAnnaParten} alt="Anna Parten, PA-C" className="w-48 h-48 rounded-full object-cover shadow-lg mb-6" />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center bg-white p-8 md:p-10 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all text-center relative overflow-hidden group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-red/60 via-medical-red to-rose-400/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <img src={imgAnnaParten} alt="Anna Parten, PA-C" className="w-48 h-48 rounded-full object-cover shadow-lg mb-6 ring-4 ring-medical-gray group-hover:ring-medical-red/20 transition-all duration-500" />
                 <h3 className="text-2xl font-bold text-medical-slate mb-2">Anna Parten, PA-C</h3>
                 <p className="text-medical-red font-bold uppercase tracking-widest text-sm mb-8">Certified Physician Assistant</p>
                 <Link to="/contact" className="inline-flex items-center gap-2 bg-medical-red hover:bg-medical-red-dark text-white px-6 py-3 rounded-full font-bold transition-all hover:scale-105 mt-auto">
                   Book Appointment <ArrowRight className="w-4 h-4" />
                 </Link>
-              </div>
+              </motion.div>
 
               {/* Megan Paul */}
-              <div className="flex flex-col items-center bg-white p-8 md:p-10 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all text-center">
-                <img src={imgMeganPaul} alt="Megan Paul, NP" className="w-48 h-48 rounded-full object-cover shadow-lg mb-6" />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="flex flex-col items-center bg-white p-8 md:p-10 rounded-[40px] shadow-sm border border-gray-100 hover:shadow-xl transition-all text-center relative overflow-hidden group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-red/60 via-medical-red to-rose-400/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <img src={imgMeganPaul} alt="Megan Paul, NP" className="w-48 h-48 rounded-full object-cover shadow-lg mb-6 ring-4 ring-medical-gray group-hover:ring-medical-red/20 transition-all duration-500" />
                 <h3 className="text-2xl font-bold text-medical-slate mb-2">Megan Paul, NP</h3>
                 <p className="text-medical-red font-bold uppercase tracking-widest text-sm mb-8">Nurse Practitioner</p>
                 <Link to="/contact" className="inline-flex items-center gap-2 bg-medical-red hover:bg-medical-red-dark text-white px-6 py-3 rounded-full font-bold transition-all hover:scale-105 mt-auto">
                   Book Appointment <ArrowRight className="w-4 h-4" />
                 </Link>
-              </div>
+              </motion.div>
 
             </div>
 

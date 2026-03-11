@@ -62,10 +62,14 @@ const services: Service[] = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-medical-gray">
+    <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-medical-gray bg-dot-grid">
       {/* Dynamic Background Elements */}
       <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-medical-red/10 rounded-full blur-[100px] -z-10 animate-pulse" />
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent z-0" />
+
+      {/* Corner decorative accents */}
+      <div className="absolute top-32 left-8 w-20 h-20 border-l-2 border-t-2 border-medical-red/20 rounded-tl-3xl pointer-events-none" />
+      <div className="absolute bottom-16 right-8 w-20 h-20 border-r-2 border-b-2 border-medical-red/20 rounded-br-3xl pointer-events-none" />
       
       <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
         
@@ -143,7 +147,7 @@ const Hero = () => {
 
 const Services = () => {
   return (
-    <section className="py-24 bg-medical-gray">
+    <section className="py-24 bg-white bg-crosshatch">
       <div className="max-w-7xl mx-auto px-6">
         <div className="double-line-divider mb-24 mt-0 opacity-50" />
         <div className="text-center mb-16">
@@ -211,10 +215,19 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="bg-medical-red py-20 overflow-hidden relative">
+    <section className="bg-medical-red py-20 overflow-hidden relative bg-dot-grid-red">
+      {/* Top and bottom border lines */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+
       <div className="absolute top-0 right-0 opacity-10">
         <Heart size={400} className="text-white" />
       </div>
+      {/* Diagonal decorative line */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute w-[200%] h-[2px] bg-white/10 rotate-[-8deg] top-1/3" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {features.map((f, i) => (
@@ -224,9 +237,9 @@ const WhyChooseUs = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="text-center text-white"
+              className="text-center text-white group"
             >
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border border-white/10 group-hover:bg-white/30 transition-colors duration-500">
                 {React.cloneElement(f.icon as React.ReactElement, { className: "w-8 h-8" })}
               </div>
               <h4 className="text-xl font-bold mb-2">{f.title}</h4>
@@ -243,12 +256,14 @@ const WhyChooseUs = () => {
 
 const Resources = () => {
   return (
-    <section id="paperwork" className="py-24 bg-medical-gray overflow-hidden">
+    <section id="paperwork" className="py-24 bg-medical-gray bg-dot-grid overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-white rounded-[60px] overflow-hidden shadow-premium border border-gray-100/50 flex flex-col lg:flex-row">
           <div className="lg:w-1/2 p-12 md:p-20 relative overflow-hidden">
             {/* Soft background glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-medical-red/5 rounded-full blur-3xl -z-10" />
+            {/* Corner accent line */}
+            <div className="absolute top-0 left-0 w-24 h-24 border-l-4 border-t-4 border-medical-red/10 rounded-tl-[56px] pointer-events-none" />
             
             <h2 className="text-4xl md:text-5xl font-bold text-medical-slate mb-8 leading-tight">
               Save Time on Your <br />
@@ -258,8 +273,7 @@ const Resources = () => {
               We want your first visit to be as smooth as possible. Download and complete our new patient forms at home to expedite your check-in process.
             </p>
           </div>
-          <div className="lg:w-1/2 bg-medical-slate p-12 md:p-20 flex flex-col justify-center items-center text-center relative border-l border-white/10">
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
+          <div className="lg:w-1/2 bg-medical-slate p-12 md:p-20 flex flex-col justify-center items-center text-center relative border-l border-white/10 noise-overlay">
             <div className="relative z-10 glass-dark p-12 rounded-[40px] w-full max-w-sm mx-auto flex flex-col items-center">
               <div className="w-24 h-24 bg-gradient-to-br from-medical-red to-medical-red-dark rounded-3xl flex items-center justify-center mb-8 shadow-glow-red">
                 <Download className="text-white w-10 h-10" />
