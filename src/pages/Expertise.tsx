@@ -145,9 +145,9 @@ export const Expertise = () => {
               className="premium-card p-8 md:p-12 hover:shadow-premium-hover transition-all duration-500 flex flex-col lg:flex-row gap-10 items-start group relative overflow-hidden"
             >
               {/* Subtle hover gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-medical-red/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-medical-red/[0.05] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
 
-              <div className="flex-shrink-0 w-24 h-24 bg-medical-gray rounded-[24px] shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:shadow-premium transition-all duration-500">
+              <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-medical-red to-rose-500 rounded-[28px] shadow-md flex items-center justify-center group-hover:scale-110 group-hover:shadow-glow-red transition-all duration-500 [&>svg]:!text-white [&>svg]:w-10 [&>svg]:h-10">
                 {item.icon}
               </div>
               

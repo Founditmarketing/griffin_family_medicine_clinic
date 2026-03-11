@@ -175,10 +175,13 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="premium-card group block w-full h-full p-8"
+              className="premium-card group block w-full h-full p-8 relative overflow-hidden"
             >
-              <Link to="/expertise" className="block w-full h-full">
-                <div className="mb-6 p-4 bg-medical-gray rounded-2xl w-fit group-hover:bg-medical-red/10 transition-colors duration-500">
+              {/* Colorful hover backdrop */}
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-medical-red/[0.04] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              
+              <Link to="/expertise" className="block w-full h-full relative z-10">
+                <div className="mb-6 w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-medical-red to-rose-500 shadow-md group-hover:shadow-glow-red transition-all duration-500 group-hover:scale-110 [&>svg]:!text-white">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-medical-slate group-hover:text-medical-red transition-colors">
