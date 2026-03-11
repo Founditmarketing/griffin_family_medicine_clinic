@@ -89,15 +89,10 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-12 border-t border-white/10 text-center">
           <p className="text-white/30 text-sm">
             © {new Date().getFullYear()} Griffin Family Medicine Clinic. All rights reserved.
           </p>
-          <div className="flex gap-8 text-white/30 text-sm">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Accessibility</a>
-          </div>
         </div>
       </div>
     </footer>
