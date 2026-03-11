@@ -121,9 +121,8 @@ export const Paperwork = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-medical-slate rounded-[40px] p-10 text-white relative overflow-hidden group noise-overlay shadow-premium"
+              className="bg-medical-slate rounded-[40px] p-10 text-white relative overflow-hidden group noise-overlay shadow-premium border-double-red"
             >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-medical-red/80 to-transparent" />
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-medical-red/20 rounded-2xl flex items-center justify-center mb-6 border border-medical-red/20">
                   <Clock className="text-medical-red w-7 h-7" />

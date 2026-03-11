@@ -46,10 +46,7 @@ export const Reviews = () => {
     <div className="pt-32 pb-24 bg-medical-gray bg-dot-grid min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header section with dark background band */}
-        <div className="bg-medical-slate rounded-[48px] p-12 md:p-16 text-center mb-16 relative overflow-hidden noise-overlay shadow-premium">
-          {/* Red accent lines */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-medical-red/80 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-medical-red/80 to-transparent" />
+        <div className="bg-medical-slate rounded-[48px] p-12 md:p-16 text-center mb-16 relative overflow-hidden noise-overlay shadow-premium border-double-red">
           {/* Background dot pattern */}
           <div className="absolute inset-0 bg-dot-grid-white opacity-100 pointer-events-none" />
           
@@ -110,12 +107,11 @@ export const Reviews = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-20 bg-white rounded-[60px] p-12 md:p-20 text-center border border-gray-100 shadow-premium relative overflow-hidden"
+          className="mt-20 bg-white rounded-[60px] p-12 md:p-20 text-center border border-gray-100 shadow-premium relative overflow-hidden border-double-red"
         >
           {/* Corner accents */}
           <div className="absolute top-0 left-0 w-24 h-24 border-l-4 border-t-4 border-medical-red/10 rounded-tl-[56px] pointer-events-none" />
           <div className="absolute bottom-0 right-0 w-24 h-24 border-r-4 border-b-4 border-medical-red/10 rounded-br-[56px] pointer-events-none" />
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-red/60 via-medical-red to-rose-400/60" />
 
           <h2 className="text-3xl font-bold text-medical-slate mb-6">Share Your Experience</h2>
           <p className="text-gray-500 mb-10 max-w-xl mx-auto">

@@ -91,9 +91,8 @@ export const CovidInfo = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
-              className="bg-medical-slate p-10 rounded-[32px] text-white relative overflow-hidden noise-overlay shadow-premium"
+              className="bg-medical-slate p-10 rounded-[32px] text-white relative overflow-hidden noise-overlay shadow-premium border-double-red"
             >
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-medical-red/80 to-transparent" />
               <div className="relative z-10">
                 <h3 className="text-xl font-bold mb-6">Testing Services</h3>
                 <p className="text-white/60 mb-8 text-sm">

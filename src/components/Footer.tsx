@@ -4,13 +4,11 @@ import { Heart, MapPin, Phone, Mail } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer id="footer" className="bg-medical-slate text-white pt-24 pb-12 relative overflow-hidden">
+    <footer id="footer" className="bg-medical-slate text-white pt-24 pb-12 relative overflow-hidden border-t-double-red">
       {/* Noise overlay */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.12] pointer-events-none mix-blend-overlay" />
       {/* Dot grid pattern */}
       <div className="absolute inset-0 bg-dot-grid-white pointer-events-none opacity-100" />
-      {/* Top red accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-medical-red to-transparent" />
       {/* Decorative red glow top-center */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-medical-red/10 blur-3xl rounded-full pointer-events-none" />
 

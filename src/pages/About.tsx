@@ -104,7 +104,7 @@ export const About = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-medical-slate rounded-[60px] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-premium noise-overlay"
+          className="bg-medical-slate rounded-[60px] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-premium noise-overlay border-double-red"
         >
           {/* Subtle glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-medical-red/20 rounded-full blur-[100px] pointer-events-none" />
@@ -112,9 +112,6 @@ export const About = () => {
           <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
             <History size={400} className="absolute -top-20 -left-20" />
           </div>
-          {/* Red accent lines */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-medical-red/60 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-medical-red/60 to-transparent" />
 
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold mb-8">Our Mission</h2>
