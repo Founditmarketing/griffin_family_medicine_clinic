@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Facebook, Twitter, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { Heart, MapPin, Phone, Mail } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -19,17 +19,6 @@ export const Footer = () => {
             <p className="text-white/50 leading-relaxed mb-8">
               Providing compassionate, comprehensive primary health care for families throughout Central Louisiana for over two decades.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-medical-red transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-medical-red transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-medical-red transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           <div>
