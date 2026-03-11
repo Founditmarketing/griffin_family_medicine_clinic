@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { 
   Stethoscope, ShieldCheck, Activity, FlaskConical, UserPlus, Clock, 
   ArrowRight, HeartPulse, Baby
@@ -98,10 +98,23 @@ const expertiseItems = [
 ];
 
 export const Expertise = () => {
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 1000], [0, -200]); // Moves up as you scroll down
+  const y2 = useTransform(scrollY, [0, 1000], [0, -100]); // Moves up slower
+
   return (
-    <div className="pt-24 min-h-screen bg-medical-gray flex flex-col relative z-0">
-      {/* Sharp Diagonal Background Pattern for the whole page */}
-      <div className="fixed inset-0 pointer-events-none opacity-[0.03] -z-10 bg-[repeating-linear-gradient(45deg,transparent,transparent_40px,#0f1214_40px,#0f1214_60px,transparent_60px,transparent_80px,#0f1214_80px,#0f1214_90px)]" />
+    <div className="pt-24 min-h-screen bg-medical-gray flex flex-col relative z-0 overflow-hidden">
+      {/* Precision Diagonal Parallax Lines */}
+      <div className="absolute inset-0 pointer-events-none -z-10 flex justify-center items-center">
+        <motion.div 
+          style={{ y: y1 }}
+          className="absolute w-[200%] h-[20px] bg-medical-red/10 rotate-[-45deg] top-[20%]"
+        />
+        <motion.div 
+          style={{ y: y2 }}
+          className="absolute w-[200%] h-[10px] bg-medical-red/20 rotate-[-45deg] top-[30%]"
+        />
+      </div>
 
       {/* Hero Section */}
       <section className="relative py-20 px-6 overflow-hidden flex-grow-0">
