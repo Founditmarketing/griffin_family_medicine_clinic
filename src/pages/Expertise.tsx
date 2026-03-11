@@ -99,7 +99,10 @@ const expertiseItems = [
 
 export const Expertise = () => {
   return (
-    <div className="pt-24 min-h-screen bg-medical-gray flex flex-col">
+    <div className="pt-24 min-h-screen bg-medical-gray flex flex-col relative z-0">
+      {/* Sharp Diagonal Background Pattern for the whole page */}
+      <div className="fixed inset-0 pointer-events-none opacity-[0.03] -z-10 bg-[repeating-linear-gradient(45deg,transparent,transparent_40px,#0f1214_40px,#0f1214_60px,transparent_60px,transparent_80px,#0f1214_80px,#0f1214_90px)]" />
+
       {/* Hero Section */}
       <section className="relative py-20 px-6 overflow-hidden flex-grow-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-medical-red/5 rounded-full blur-3xl -z-10" />
@@ -133,7 +136,7 @@ export const Expertise = () => {
       </section>
 
       {/* Expertise List */}
-      <section className="py-20 px-6 bg-white flex-grow">
+      <section className="py-20 px-6 relative flex-grow z-10">
         <div className="max-w-7xl mx-auto flex flex-col gap-12">
           {expertiseItems.map((item, index) => (
             <motion.div
@@ -160,26 +163,19 @@ export const Expertise = () => {
                   {item.description}
                 </p>
                 
-                <div className="bg-medical-gray/50 border-2 border-medical-slate/5 rounded-3xl p-6 md:p-8 relative overflow-hidden">
-                  {/* Sharp Diagonal Background Pattern */}
-                  <div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-10">
-                    <div className="absolute top-[-50%] right-[-10%] w-[120%] h-[200%] bg-[repeating-linear-gradient(45deg,transparent,transparent_40px,#0f1214_40px,#0f1214_60px,transparent_60px,transparent_80px,#0f1214_80px,#0f1214_90px)]" />
-                  </div>
-
-                  <div className="relative z-10">
-                    <h4 className="font-bold text-medical-slate mb-4 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-medical-red rounded-full" />
-                      Key Areas of Focus:
-                    </h4>
-                    <ul className="grid md:grid-cols-2 gap-4">
-                      {item.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-gray-600">
-                          <ArrowRight className="w-5 h-5 text-medical-red flex-shrink-0 mt-0.5" />
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="mt-8 border-t border-medical-slate/10 pt-8">
+                  <h4 className="font-bold text-medical-slate mb-4 flex items-center gap-2">
+                    <span className="w-2 h-2 bg-medical-red rounded-full" />
+                    Key Areas of Focus:
+                  </h4>
+                  <ul className="grid md:grid-cols-2 gap-4">
+                    {item.details.map((detail, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-gray-600">
+                        <ArrowRight className="w-5 h-5 text-medical-red flex-shrink-0 mt-0.5" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </motion.div>
