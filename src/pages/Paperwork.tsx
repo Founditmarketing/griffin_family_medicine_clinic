@@ -47,9 +47,9 @@ export const Paperwork = () => {
                           <p className="text-xs text-gray-400 uppercase font-bold tracking-wider">{form.type} • {form.size}</p>
                         </div>
                       </div>
-                      <button className="p-4 bg-white rounded-xl shadow-sm hover:bg-medical-red hover:text-white transition-all">
+                      <a href="/Griffin_Forms.pdf" target="_blank" rel="noopener noreferrer" download="Griffin_Forms.pdf" className="p-4 bg-white rounded-xl shadow-sm hover:bg-medical-red hover:text-white transition-all">
                         <Download className="w-5 h-5" />
-                      </button>
+                      </a>
                     </div>
                   ))}
                 </div>
@@ -60,10 +60,10 @@ export const Paperwork = () => {
                     <h3 className="text-xl font-bold mb-2">Download All Forms</h3>
                     <p className="text-white/50 text-sm">Get the complete new patient packet in one click.</p>
                   </div>
-                  <button className="bg-medical-red px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-medical-red-dark transition-all">
+                  <a href="/Griffin_Forms.pdf" target="_blank" rel="noopener noreferrer" download="Griffin_Forms.pdf" className="bg-medical-red px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-medical-red-dark transition-all">
                     <Download className="w-5 h-5" />
                     Download Complete Packet
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
