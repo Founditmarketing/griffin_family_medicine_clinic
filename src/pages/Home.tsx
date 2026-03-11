@@ -99,45 +99,80 @@ const services: Service[] = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pt-32 pb-24">
-      {/* Background Image covering the entire section */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={imgAllStaff} 
-          alt="Griffin Family Medicine Clinic Staff" 
-          className="w-full h-full object-cover object-top"
-          referrerPolicy="no-referrer"
-        />
-        {/* Dark to transparent gradient overlay to ensure text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-medical-slate/90 via-medical-slate/50 to-transparent" />
-      </div>
+    <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-medical-gray">
+      {/* Dynamic Background Elements */}
+      <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-medical-red/10 rounded-full blur-[100px] -z-10 animate-pulse" />
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent z-0" />
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+      <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+        
+        {/* Text Content Block */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-2xl text-white"
+          className="w-full lg:w-5/12 xl:w-1/2 lg:pr-8"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-medical-red/80 backdrop-blur-sm rounded-full mb-6">
-            <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            <span className="text-xs font-bold text-white uppercase tracking-wider">Accepting New Patients</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-medical-red/20 shadow-lg shadow-medical-red/5 rounded-full mb-8">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-medical-red opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-medical-red"></span>
+            </span>
+            <span className="text-xs font-bold text-medical-slate uppercase tracking-widest">Accepting New Patients</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6 drop-shadow-lg">
-            Providing Quality <br />
-            <span className="text-medical-red">Primary Health Care</span> <br />
-            for People in Cenla.
+          
+          <h1 className="text-6xl sm:text-7xl lg:text-[5rem] font-extrabold text-medical-slate leading-[1.05] mb-8 tracking-tight">
+            Quality Care <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-red to-rose-400">For Your Family.</span>
           </h1>
-          <p className="text-lg text-white/90 mb-10 max-w-lg leading-relaxed drop-shadow-md">
-            Expert, compassionate medical attention for you and your family. In-person and Telehealth appointments available to fit your schedule.
+          
+          <p className="text-xl text-gray-500 mb-12 max-w-lg leading-relaxed font-light">
+            Expert, compassionate medical attention for the CENLA community. In-person and Telehealth appointments tailored to fit your schedule.
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact" className="bg-medical-red hover:bg-medical-red-dark text-white px-8 py-4 rounded-full font-bold shadow-2xl shadow-medical-red/30 transition-all hover:translate-y-[-2px] flex items-center justify-center gap-2">
-              Book Same-Day Appointment
-              <ChevronRight className="w-4 h-4" />
+            <Link to="/contact" className="bg-medical-red hover:bg-medical-red-dark text-white px-8 py-4 rounded-2xl font-bold shadow-2xl shadow-medical-red/30 transition-all hover:-translate-y-1 flex items-center justify-center gap-3 group">
+              Book Appointment
+              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+            <a href="tel:3184458380" className="bg-white border-2 border-gray-100 hover:border-medical-red/30 text-medical-slate px-8 py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 hover:-translate-y-1 shadow-sm">
+              Call (318) 445-8380
+            </a>
           </div>
         </motion.div>
+
+        {/* Massive Image Block */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          className="w-full lg:w-7/12 xl:w-1/2 relative mt-8 lg:mt-0"
+        >
+          {/* Decorative accents */}
+          <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-medical-red/20 rounded-[40px] -z-10" />
+          <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-medical-slate rounded-[40px] -z-10" />
+          
+          <div className="relative rounded-[40px] overflow-hidden shadow-2xl ring-1 ring-black/5 bg-white p-2">
+            <img 
+              src={imgAllStaff} 
+              alt="Griffin Family Medicine Clinic Staff" 
+              className="w-full h-[500px] lg:h-[700px] object-cover rounded-[32px] object-center"
+              referrerPolicy="no-referrer"
+            />
+            
+            {/* Floating Glass UI Element */}
+            <div className="absolute bottom-10 left-10 md:bottom-12 md:left-12 glass px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4">
+              <div className="w-12 h-12 bg-medical-red rounded-full flex items-center justify-center text-white shrink-0 shadow-inner">
+                <Heart className="w-6 h-6" fill="currentColor" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-medical-slate">20+ Years</p>
+                <p className="text-xs text-medical-slate/70 font-medium">Serving Central Louisiana</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );
