@@ -13,6 +13,7 @@ import {
   Calendar
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 // --- Types ---
 interface Provider {
@@ -183,17 +184,22 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-white p-8 rounded-[32px] shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group"
+              className="bg-white rounded-[32px] shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group"
             >
-              <div className="mb-6 p-4 bg-medical-gray rounded-2xl w-fit group-hover:bg-medical-red/10 transition-colors">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-medical-slate group-hover:text-medical-red transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-500 leading-relaxed">
-                {service.description}
-              </p>
+              <Link to="/expertise" className="block w-full h-full p-8">
+                <div className="mb-6 p-4 bg-medical-gray rounded-2xl w-fit group-hover:bg-medical-red/10 transition-colors">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-medical-slate group-hover:text-medical-red transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-500 leading-relaxed mb-4">
+                  {service.description}
+                </p>
+                <div className="font-bold text-medical-red text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform duration-300">
+                  Learn More <ChevronRight className="w-4 h-4" />
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
