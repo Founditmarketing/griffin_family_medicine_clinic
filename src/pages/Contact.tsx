@@ -93,19 +93,15 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-medical-slate rounded-[40px] overflow-hidden h-80 relative group">
-              <img 
-                src="https://picsum.photos/seed/contact-map/800/600" 
-                alt="Map" 
-                className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <a href="https://maps.google.com/?q=145+Yorktown+Dr,+Alexandria,+LA+71303" target="_blank" rel="noopener noreferrer" className="bg-white text-medical-slate px-8 py-4 rounded-2xl font-bold shadow-2xl flex items-center gap-2 hover:bg-medical-red hover:text-white transition-all">
-                  Get Directions
-                  <ChevronRight className="w-5 h-5" />
-                </a>
-              </div>
+            <div className="bg-medical-slate rounded-[40px] overflow-hidden h-80 relative group shadow-2xl">
+              <iframe 
+                src="https://www.google.com/maps/d/embed?mid=1a1S9c9gDwFe3a_iXDQuyc-dNLW5e5Ho&ehbc=2E312F" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }}
+                title="Griffin Family Medicine Clinic Map"
+                className="opacity-90 group-hover:opacity-100 transition-opacity duration-700"
+              ></iframe>
             </div>
           </div>
         </div>

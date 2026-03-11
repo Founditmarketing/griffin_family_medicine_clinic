@@ -57,17 +57,14 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-8">Our Location</h4>
             <div className="h-48 bg-white/5 rounded-3xl overflow-hidden relative group">
-              <img 
-                src="https://picsum.photos/seed/map/400/300" 
-                alt="Map" 
-                className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <a href="https://maps.google.com/?q=145+Yorktown+Dr,+Alexandria,+LA+71303" target="_blank" rel="noopener noreferrer" className="bg-medical-red hover:bg-medical-red-dark text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg transition-colors">
-                  View on Google Maps
-                </a>
-              </div>
+              <iframe 
+                src="https://www.google.com/maps/d/embed?mid=1a1S9c9gDwFe3a_iXDQuyc-dNLW5e5Ho&ehbc=2E312F" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }}
+                title="Griffin Family Medicine Clinic Map"
+                className="opacity-70 group-hover:opacity-100 transition-opacity"
+              ></iframe>
             </div>
           </div>
         </div>
