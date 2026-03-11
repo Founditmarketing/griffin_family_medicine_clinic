@@ -69,13 +69,12 @@ export const Contact = () => {
                 <Phone className="text-medical-red w-8 h-8 mb-6" />
                 <h3 className="font-bold mb-2">Call Us</h3>
                 <a href="tel:3184458380" className="text-sm text-gray-500 hover:text-medical-red transition-colors block mb-1">P: (318) 445-8380</a>
-                <p className="text-sm text-gray-500">F: (318) 445-9753</p>
+                <a href="fax:3184459753" className="text-sm text-gray-500 hover:text-medical-red transition-colors block">F: (318) 445-9753</a>
               </div>
               <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
                 <Mail className="text-medical-red w-8 h-8 mb-6" />
                 <h3 className="font-bold mb-2">Email Us</h3>
                 <a href="mailto:Griffin_family_medicine@yahoo.com" className="text-sm text-gray-500 hover:text-medical-red transition-colors block mb-1 break-all">Griffin_family_medicine@yahoo.com</a>
-                <a href="mailto:billing@griffinfamily.com" className="text-sm text-gray-500 hover:text-medical-red transition-colors block">billing@griffinfamily.com</a>
               </div>
               <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
                 <MapPin className="text-medical-red w-8 h-8 mb-6" />
@@ -88,8 +87,8 @@ export const Contact = () => {
               <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
                 <Clock className="text-medical-red w-8 h-8 mb-6" />
                 <h3 className="font-bold mb-2">Hours</h3>
-                <p className="text-sm text-gray-500">Mon - Fri: 8am - 5pm</p>
-                <p className="text-sm text-gray-500">Sat - Sun: Closed</p>
+                <p className="text-sm text-gray-500">M-Th: 8am-12pm – 1pm-5pm</p>
+                <p className="text-sm text-gray-500">F: 8am – 2pm</p>
               </div>
             </div>
 

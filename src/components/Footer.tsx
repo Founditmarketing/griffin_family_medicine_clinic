@@ -44,7 +44,7 @@ export const Footer = () => {
                 <Phone className="text-medical-red shrink-0" />
                 <div className="text-white/50 flex flex-col gap-1">
                   <a href="tel:3184458380" className="hover:text-white transition-colors">P: (318) 445-8380</a>
-                  <p>F: (318) 445-9753</p>
+                  <a href="fax:3184459753" className="hover:text-white transition-colors">F: (318) 445-9753</a>
                 </div>
               </li>
               <li className="flex gap-4">
