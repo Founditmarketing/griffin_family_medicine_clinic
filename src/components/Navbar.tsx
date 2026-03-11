@@ -57,10 +57,6 @@ export const Navbar = () => {
               (318) 445-8380
             </a>
           </div>
-          <button className="bg-medical-red hover:bg-medical-red-dark text-white px-6 py-3 rounded-full text-sm font-bold shadow-xl shadow-medical-red/20 transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
-            <Video className="w-4 h-4" />
-            Start Telehealth Call
-          </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -94,11 +90,6 @@ export const Navbar = () => {
                   {link.name}
                 </NavLink>
               ))}
-              <hr className="border-gray-100" />
-              <button className="w-full bg-medical-red text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2">
-                <Video className="w-5 h-5" />
-                Start Telehealth Call
-              </button>
             </div>
           </motion.div>
         )}
