@@ -31,9 +31,6 @@ export const Contact = () => {
           >
             {/* Top red accent */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-red/60 via-medical-red to-rose-400/60" />
-            {/* Corner decoration */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-medical-red/5 rounded-bl-[60px] pointer-events-none" />
-            <div className="absolute top-5 right-5 w-4 h-4 bg-medical-red/30 rounded-full pointer-events-none" />
 
             <h2 className="text-3xl font-bold text-medical-slate mb-8">Send us a Message</h2>
             <form className="space-y-6">
