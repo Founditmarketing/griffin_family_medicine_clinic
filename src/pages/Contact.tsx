@@ -93,7 +93,7 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-medical-slate rounded-[40px] overflow-hidden h-80 relative group shadow-2xl">
+            <div className="bg-medical-slate rounded-[40px] overflow-hidden min-h-[500px] relative group shadow-2xl">
               <iframe 
                 src="https://www.google.com/maps/d/embed?mid=1a1S9c9gDwFe3a_iXDQuyc-dNLW5e5Ho&ehbc=2E312F" 
                 width="100%" 

@@ -56,7 +56,7 @@ export const Footer = () => {
 
           <div>
             <h4 className="text-lg font-bold mb-8">Our Location</h4>
-            <div className="h-48 bg-white/5 rounded-3xl overflow-hidden relative group">
+            <div className="h-72 bg-white/5 rounded-3xl overflow-hidden relative group">
               <iframe 
                 src="https://www.google.com/maps/d/embed?mid=1a1S9c9gDwFe3a_iXDQuyc-dNLW5e5Ho&ehbc=2E312F" 
                 width="100%" 
