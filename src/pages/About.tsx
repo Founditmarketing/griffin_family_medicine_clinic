@@ -78,9 +78,12 @@ export const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-medical-gray p-10 rounded-[32px] border border-gray-100"
+              whileHover={{ y: -10 }}
+              className="premium-card p-10 group"
             >
-              <div className="mb-6 text-medical-red">{value.icon}</div>
+              <div className="mb-6 p-4 bg-medical-gray rounded-2xl w-fit group-hover:bg-medical-red/10 transition-colors duration-500 text-medical-red shadow-sm">
+                {value.icon}
+              </div>
               <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
               <p className="text-gray-500 leading-relaxed">{value.desc}</p>
             </motion.div>
@@ -92,9 +95,13 @@ export const About = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-medical-slate rounded-[60px] p-12 md:p-20 text-center text-white relative overflow-hidden"
+          className="bg-medical-slate rounded-[60px] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-premium"
         >
-          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          {/* Subtle noise and glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-medical-red/20 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
+          
+          <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
             <History size={400} className="absolute -top-20 -left-20" />
           </div>
           <div className="relative z-10 max-w-3xl mx-auto">

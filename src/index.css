@@ -1,13 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Montserrat", sans-serif;
-  --color-medical-red: #D32F2F;
-  --color-medical-red-dark: #B71C1C;
-  --color-medical-gray: #F8F9FA;
-  --color-medical-slate: #1A1D20;
+  --font-display: "Playfair Display", serif;
+  /* A slightly more sophisticated, deeper crimson */
+  --color-medical-red: #bb132a;
+  --color-medical-red-dark: #8b0000;
+  /* A warmer, softer gray background */
+  --color-medical-gray: #fdfcfb;
+  /* Deeper slate for sharper contrast */
+  --color-medical-slate: #0f1214;
+
+  --shadow-premium: var(--shadow-sm), 0 20px 40px -10px rgba(0, 0, 0, 0.08), 0 10px 20px -5px rgba(0, 0, 0, 0.04);
+  --shadow-premium-hover: var(--shadow-md), 0 30px 60px -15px rgba(0, 0, 0, 0.12), 0 15px 30px -10px rgba(0, 0, 0, 0.06);
+  --shadow-glow-red: 0 0 40px -10px rgba(187, 19, 42, 0.5);
 }
 
 @layer base {
@@ -20,7 +27,15 @@
 }
 
 .glass {
-  @apply bg-white/80 backdrop-blur-md border-b border-white/20;
+  @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-premium;
+}
+
+.glass-dark {
+  @apply bg-medical-slate/80 backdrop-blur-xl border border-white/10 shadow-premium;
+}
+
+.premium-card {
+  @apply bg-white rounded-[40px] shadow-premium hover:shadow-premium-hover transition-all duration-500 border border-gray-100/50 hover:border-gray-200;
 }
 
 .bento-grid {

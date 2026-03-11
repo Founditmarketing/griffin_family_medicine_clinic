@@ -24,7 +24,7 @@ export const Contact = () => {
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white p-10 md:p-16 rounded-[60px] shadow-2xl border border-gray-100"
+            className="bg-white p-10 md:p-16 rounded-[60px] shadow-premium border border-gray-100/50"
           >
             <h2 className="text-3xl font-bold text-medical-slate mb-8">Send us a Message</h2>
             <form className="space-y-6">
@@ -55,7 +55,7 @@ export const Contact = () => {
                 <label className="text-sm font-bold text-medical-slate uppercase tracking-wider">Message</label>
                 <textarea rows={5} placeholder="How can we help you?" className="w-full bg-medical-gray border-none rounded-2xl p-4 focus:ring-2 focus:ring-medical-red transition-all outline-none resize-none"></textarea>
               </div>
-              <button className="w-full bg-medical-red text-white py-5 rounded-2xl font-bold shadow-xl shadow-medical-red/20 hover:bg-medical-red-dark transition-all flex items-center justify-center gap-3">
+              <button className="w-full bg-medical-red text-white py-5 rounded-2xl font-bold shadow-glow-red hover:bg-medical-red-dark transition-all duration-500 hover:-translate-y-1 flex items-center justify-center gap-3">
                 Send Message
                 <Send className="w-5 h-5" />
               </button>
@@ -65,34 +65,34 @@ export const Contact = () => {
           {/* Contact Info & Map */}
           <div className="space-y-12">
             <div className="grid sm:grid-cols-2 gap-8">
-              <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
-                <Phone className="text-medical-red w-8 h-8 mb-6" />
+              <div className="premium-card p-8 group">
+                <Phone className="text-medical-red w-8 h-8 mb-6 group-hover:scale-110 transition-transform duration-500" />
                 <h3 className="font-bold mb-2">Call Us</h3>
                 <a href="tel:3184458380" className="text-sm text-gray-500 hover:text-medical-red transition-colors block mb-1">P: (318) 445-8380</a>
                 <a href="fax:3184459753" className="text-sm text-gray-500 hover:text-medical-red transition-colors block">F: (318) 445-9753</a>
               </div>
-              <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
-                <Mail className="text-medical-red w-8 h-8 mb-6" />
+              <div className="premium-card p-8 group">
+                <Mail className="text-medical-red w-8 h-8 mb-6 group-hover:scale-110 transition-transform duration-500" />
                 <h3 className="font-bold mb-2">Email Us</h3>
                 <a href="mailto:Griffin_family_medicine@yahoo.com" className="text-sm text-gray-500 hover:text-medical-red transition-colors block mb-1 break-all">Griffin_family_medicine@yahoo.com</a>
               </div>
-              <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
-                <MapPin className="text-medical-red w-8 h-8 mb-6" />
+              <div className="premium-card p-8 group">
+                <MapPin className="text-medical-red w-8 h-8 mb-6 group-hover:scale-110 transition-transform duration-500" />
                 <h3 className="font-bold mb-2">Visit Us</h3>
                 <a href="https://maps.google.com/?q=145+Yorktown+Dr,+Alexandria,+LA+71303" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-medical-red transition-colors block">
                   145 Yorktown Dr,<br />
                   Alexandria, LA 71303
                 </a>
               </div>
-              <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
-                <Clock className="text-medical-red w-8 h-8 mb-6" />
+              <div className="premium-card p-8 group">
+                <Clock className="text-medical-red w-8 h-8 mb-6 group-hover:scale-110 transition-transform duration-500" />
                 <h3 className="font-bold mb-2">Hours</h3>
                 <p className="text-sm text-gray-500">M-Th: 8am-12pm – 1pm-5pm</p>
                 <p className="text-sm text-gray-500">F: 8am – 2pm</p>
               </div>
             </div>
 
-            <div className="bg-medical-slate rounded-[40px] overflow-hidden min-h-[500px] relative group shadow-2xl">
+            <div className="bg-medical-slate rounded-[40px] overflow-hidden min-h-[500px] relative group shadow-premium hover:shadow-premium-hover transition-shadow duration-500">
               <iframe 
                 src="https://www.google.com/maps/d/embed?mid=1a1S9c9gDwFe3a_iXDQuyc-dNLW5e5Ho&ehbc=2E312F" 
                 width="100%" 

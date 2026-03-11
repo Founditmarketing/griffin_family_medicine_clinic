@@ -30,7 +30,7 @@ export const Paperwork = () => {
 
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-6">
-            <div className="bg-white rounded-[40px] shadow-sm border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-[40px] shadow-premium border border-gray-100 overflow-hidden hover:shadow-premium-hover transition-all duration-500">
               <div className="p-8 md:p-12">
                 <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
                   <FileText className="text-medical-red" />
@@ -48,7 +48,7 @@ export const Paperwork = () => {
                           <p className="text-xs text-gray-400 uppercase font-bold tracking-wider">{form.type} • {form.size}</p>
                         </div>
                       </div>
-                      <Link to="/forms-viewer" className="p-4 bg-white rounded-xl shadow-sm hover:bg-medical-red hover:text-white transition-all">
+                      <Link to="/forms-viewer" className="p-4 bg-white rounded-xl shadow-premium hover:bg-medical-red hover:text-white transition-all duration-500 group-hover:-translate-y-1">
                         <Download className="w-5 h-5" />
                       </Link>
                     </div>
@@ -61,7 +61,7 @@ export const Paperwork = () => {
                     <h3 className="text-xl font-bold mb-2">Download All Forms</h3>
                     <p className="text-white/50 text-sm">Get the complete new patient packet in one click.</p>
                   </div>
-                  <Link to="/forms-viewer" className="bg-medical-red px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-medical-red-dark transition-all">
+                  <Link to="/forms-viewer" className="bg-medical-red px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-medical-red-dark transition-all duration-500 shadow-glow-red hover:-translate-y-1">
                     <Download className="w-5 h-5" />
                     Download Complete Packet
                   </Link>
@@ -71,7 +71,7 @@ export const Paperwork = () => {
           </div>
 
           <div className="space-y-8">
-            <div className="bg-medical-gray p-10 rounded-[40px] border border-gray-100">
+            <div className="premium-card p-10 bg-medical-gray border border-gray-100">
               <h3 className="text-xl font-bold mb-8">Instructions</h3>
               <div className="space-y-8">
                 {[
@@ -90,8 +90,8 @@ export const Paperwork = () => {
               </div>
             </div>
 
-            <div className="bg-medical-red/5 p-10 rounded-[40px] border border-medical-red/10">
-              <Clock className="text-medical-red w-10 h-10 mb-6" />
+            <div className="premium-card bg-medical-red/5 p-10 border border-medical-red/10 group">
+              <Clock className="text-medical-red w-10 h-10 mb-6 group-hover:scale-110 transition-transform duration-500" />
               <h3 className="text-xl font-bold mb-4">Need Help?</h3>
               <p className="text-gray-600 text-sm mb-8">
                 If you have any questions about the forms or need assistance, our staff is here to help.

@@ -76,7 +76,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full lg:w-5/12 xl:w-1/2 lg:pr-8"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-medical-red/20 shadow-lg shadow-medical-red/5 rounded-full mb-8">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 glass border border-medical-red/20 shadow-premium rounded-full mb-8">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-medical-red opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-medical-red"></span>
@@ -94,11 +94,11 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact" className="bg-medical-red hover:bg-medical-red-dark text-white px-8 py-4 rounded-2xl font-bold shadow-2xl shadow-medical-red/30 transition-all hover:-translate-y-1 flex items-center justify-center gap-3 group">
+            <Link to="/contact" className="bg-medical-red hover:bg-medical-red-dark text-white px-8 py-4 rounded-2xl font-bold shadow-glow-red transition-all duration-500 hover:-translate-y-1 flex items-center justify-center gap-3 group">
               Book Appointment
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-500" />
             </Link>
-            <a href="tel:3184458380" className="bg-white border-2 border-gray-100 hover:border-medical-red/30 text-medical-slate px-8 py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 hover:-translate-y-1 shadow-sm">
+            <a href="tel:3184458380" className="glass border border-gray-200 hover:border-medical-red/50 text-medical-slate px-8 py-4 rounded-2xl font-bold transition-all duration-500 flex items-center justify-center gap-3 hover:-translate-y-1 shadow-premium">
               Call (318) 445-8380
             </a>
           </div>
@@ -115,7 +115,7 @@ const Hero = () => {
           <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-medical-red/20 rounded-[40px] -z-10" />
           <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-medical-slate rounded-[40px] -z-10" />
           
-          <div className="relative rounded-[40px] overflow-hidden shadow-2xl ring-1 ring-black/5 bg-white p-2">
+          <div className="relative rounded-[40px] overflow-hidden shadow-premium bg-white p-2">
             <img 
               src={imgAllStaff} 
               alt="Griffin Family Medicine Clinic Staff" 
@@ -124,7 +124,7 @@ const Hero = () => {
             />
             
             {/* Floating Glass UI Element */}
-            <div className="absolute bottom-10 left-10 md:bottom-12 md:left-12 glass px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4">
+            <div className="absolute bottom-10 left-10 md:bottom-12 md:left-12 glass px-6 py-4 rounded-2xl flex items-center gap-4">
               <div className="w-12 h-12 bg-medical-red rounded-full flex items-center justify-center text-white shrink-0 shadow-inner">
                 <Heart className="w-6 h-6" fill="currentColor" />
               </div>
@@ -174,10 +174,10 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-[32px] shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group"
+              className="premium-card group block w-full h-full p-8"
             >
-              <Link to="/expertise" className="block w-full h-full p-8">
-                <div className="mb-6 p-4 bg-medical-gray rounded-2xl w-fit group-hover:bg-medical-red/10 transition-colors">
+              <Link to="/expertise" className="block w-full h-full">
+                <div className="mb-6 p-4 bg-medical-gray rounded-2xl w-fit group-hover:bg-medical-red/10 transition-colors duration-500">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-medical-slate group-hover:text-medical-red transition-colors">
@@ -241,25 +241,29 @@ const Resources = () => {
   return (
     <section id="paperwork" className="py-24 bg-medical-gray overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-white rounded-[60px] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
-          <div className="lg:w-1/2 p-12 md:p-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-medical-slate mb-8">
+        <div className="bg-white rounded-[60px] overflow-hidden shadow-premium border border-gray-100/50 flex flex-col lg:flex-row">
+          <div className="lg:w-1/2 p-12 md:p-20 relative overflow-hidden">
+            {/* Soft background glow */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-medical-red/5 rounded-full blur-3xl -z-10" />
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-medical-slate mb-8 leading-tight">
               Save Time on Your <br />
-              <span className="text-medical-red">First Visit.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-medical-red to-rose-400">First Visit.</span>
             </h2>
             <p className="text-gray-500 mb-12 leading-relaxed text-lg">
               We want your first visit to be as smooth as possible. Download and complete our new patient forms at home to expedite your check-in process.
             </p>
           </div>
-          <div className="lg:w-1/2 bg-medical-slate p-12 md:p-20 flex flex-col justify-center items-center text-center relative">
-            <div className="relative z-10">
-              <div className="w-24 h-24 bg-medical-red rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-medical-red/40">
+          <div className="lg:w-1/2 bg-medical-slate p-12 md:p-20 flex flex-col justify-center items-center text-center relative border-l border-white/10">
+            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
+            <div className="relative z-10 glass-dark p-12 rounded-[40px] w-full max-w-sm mx-auto flex flex-col items-center">
+              <div className="w-24 h-24 bg-gradient-to-br from-medical-red to-medical-red-dark rounded-3xl flex items-center justify-center mb-8 shadow-glow-red">
                 <Download className="text-white w-10 h-10" />
               </div>
-              <h3 className="text-3xl font-bold text-white mb-6">New Patient Paperwork</h3>
-              <Link to="/forms-viewer" className="bg-white text-medical-slate hover:bg-medical-red hover:text-white px-10 py-5 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 mx-auto shadow-xl w-fit">
-                Download PDF Packet
-                <ChevronRight className="w-5 h-5" />
+              <h3 className="text-2xl font-bold text-white mb-8">New Patient Paperwork</h3>
+              <Link to="/forms-viewer" className="bg-white text-medical-slate hover:bg-medical-red hover:text-white px-10 py-5 rounded-2xl font-bold transition-all duration-500 flex items-center justify-center gap-3 w-full shadow-premium hover:-translate-y-1 group">
+                Download Packet
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-500" />
               </Link>
             </div>
           </div>

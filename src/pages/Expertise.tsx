@@ -142,9 +142,12 @@ export const Expertise = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
-              className="bg-medical-gray rounded-[40px] p-8 md:p-12 border border-transparent hover:border-medical-red/10 hover:shadow-2xl transition-all duration-300 flex flex-col lg:flex-row gap-10 items-start group"
+              className="premium-card p-8 md:p-12 hover:shadow-premium-hover transition-all duration-500 flex flex-col lg:flex-row gap-10 items-start group relative overflow-hidden"
             >
-              <div className="flex-shrink-0 w-24 h-24 bg-white rounded-[24px] shadow-sm flex items-center justify-center group-hover:scale-105 group-hover:shadow-lg transition-all duration-300">
+              {/* Subtle hover gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-medical-red/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+
+              <div className="flex-shrink-0 w-24 h-24 bg-medical-gray rounded-[24px] shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:shadow-premium transition-all duration-500">
                 {item.icon}
               </div>
               
@@ -157,7 +160,7 @@ export const Expertise = () => {
                   {item.description}
                 </p>
                 
-                <div className="bg-white rounded-3xl p-6 md:p-8">
+                <div className="glass rounded-3xl p-6 md:p-8 relative">
                   <h4 className="font-bold text-medical-slate mb-4 flex items-center gap-2">
                     <span className="w-2 h-2 bg-medical-red rounded-full" />
                     Key Areas of Focus:
@@ -194,7 +197,7 @@ export const Expertise = () => {
             </Link>
             <Link 
               to="/contact" 
-              className="bg-medical-red hover:bg-medical-red-dark text-white px-8 py-4 rounded-full font-bold shadow-xl transition-all hover:scale-105"
+              className="bg-medical-red hover:bg-medical-red-dark text-white px-8 py-4 rounded-full font-bold shadow-glow-red transition-all duration-500 hover:-translate-y-1"
             >
               Contact Us
             </Link>
