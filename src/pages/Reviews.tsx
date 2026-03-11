@@ -5,40 +5,34 @@ import { Star, Quote, User } from 'lucide-react';
 export const Reviews = () => {
   const reviews = [
     {
-      name: "Sarah J.",
+      name: "Raquel Riche",
       rating: 5,
-      text: "Dr. Griffin and his staff are wonderful. They take the time to listen and truly care about their patients. I've been coming here for 10 years and wouldn't go anywhere else.",
-      date: "2 weeks ago"
+      text: "Dr Griffin's office staff is very professional. My NP Jaimie Perrotti has been instrumental in trying to diagnose an issue w/ my bloodwork, and I greatly appreciate her ethics and professionalism!"
     },
     {
-      name: "Michael R.",
+      name: "Brittany Cupp",
       rating: 5,
-      text: "The wait times are always short, and the facility is spotless. Jamie Perrotti is fantastic—very thorough and knowledgeable.",
-      date: "1 month ago"
+      text: "I love going here and seeing Dr. Amy. She is very helpful and very fast. I wouldn't choose another doctor to see. Very nice staff and very helpful. Never having to wait long."
     },
     {
-      name: "Emily W.",
+      name: "Clint Whitcher",
       rating: 5,
-      text: "I love the telehealth option! It's so convenient for follow-ups. The staff is always friendly and professional.",
-      date: "3 months ago"
+      text: "Very good staff. Making an appointment is easy. My grandpa is also one of their patients and he is thoroughly impressed by them."
     },
     {
-      name: "David L.",
-      rating: 4,
-      text: "Great experience every time. The new patient process was very easy thanks to the online forms.",
-      date: "4 months ago"
+      name: "Hamilton",
+      rating: 5,
+      text: "All I can say is I love her. She listens and takes the appropriate amount of time with her patients. She never rushes and she listens and cares about her patients. I'm not just a number to her."
     },
     {
-      name: "Jessica M.",
+      name: "Martha Harper",
       rating: 5,
-      text: "Best family clinic in Alexandria. They treat you like a person, not just a number. Highly recommend Dr. Amy Griffin.",
-      date: "6 months ago"
+      text: "I have been going to her for about 10 years. She has always taken time to listen to me and is ready to help me with my medical needs. I have trust in her. If she can't help she refers me to a doctor who can help."
     },
     {
-      name: "Robert K.",
+      name: "Shana S.",
       rating: 5,
-      text: "Professional, clean, and caring. What more can you ask for in a family doctor?",
-      date: "8 months ago"
+      text: "Great doctors and staff who really listen and work with you for the best health outcome."
     }
   ];
 
@@ -62,9 +56,9 @@ export const Reviews = () => {
               <div className="flex text-yellow-400">
                 {[1, 2, 3, 4, 5].map((s) => <Star key={s} fill="currentColor" className="w-6 h-6" />)}
               </div>
-              <span className="text-2xl font-bold text-white">4.9/5</span>
+              <span className="text-2xl font-bold text-white">5.0/5</span>
             </div>
-            <p className="text-white/50">Based on over 500 verified patient reviews.</p>
+            <p className="text-white/50">Based on verified Google patient reviews.</p>
           </div>
         </div>
 
@@ -96,7 +90,9 @@ export const Reviews = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-medical-slate">{review.name}</h4>
-                  <p className="text-xs text-gray-400 uppercase font-bold tracking-widest">{review.date}</p>
+                  <p className="text-xs text-yellow-500 font-bold tracking-widest flex gap-0.5">
+                    ★★★★★
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -117,9 +113,14 @@ export const Reviews = () => {
           <p className="text-gray-500 mb-10 max-w-xl mx-auto">
             Your feedback helps us improve our services and helps other patients find the care they need.
           </p>
-          <button className="bg-medical-red text-white px-10 py-5 rounded-2xl font-bold shadow-glow-red hover:bg-medical-red-dark transition-all hover:-translate-y-1 duration-500">
-            Write a Review
-          </button>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Griffin+Family+Medicine+Clinic+Alexandria+LA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-medical-red text-white px-10 py-5 rounded-2xl font-bold shadow-glow-red hover:bg-medical-red-dark transition-all hover:-translate-y-1 duration-500"
+          >
+            Write a Review on Google
+          </a>
         </motion.div>
       </div>
     </div>
