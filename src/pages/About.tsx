@@ -104,7 +104,7 @@ export const About = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-medical-slate rounded-[60px] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-premium noise-overlay border-double-red"
+          className="bg-medical-slate rounded-[60px] pt-8 pb-12 px-12 md:pt-12 md:pb-20 md:px-20 text-center text-white relative overflow-hidden shadow-premium noise-overlay border-double-red"
         >
           {/* Subtle glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-medical-red/20 rounded-full blur-[100px] pointer-events-none" />
