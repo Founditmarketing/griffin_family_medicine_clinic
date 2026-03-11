@@ -16,13 +16,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import imgAllStaff from '../assets/all-staff.jpg';
 
-// --- Types ---
-interface Provider {
-  name: string;
-  title: string;
-  image: string;
-  bio: string;
-}
+
 
 interface Service {
   title: string;
@@ -31,38 +25,7 @@ interface Service {
 }
 
 // --- Data ---
-const providers: Provider[] = [
-  {
-    name: "Christopher Griffin, M.D.",
-    title: "Family Physician",
-    image: "https://picsum.photos/seed/doc1/400/500",
-    bio: "Specializing in comprehensive family care with over 20 years of experience in the Cenla area."
-  },
-  {
-    name: "Amy Griffin, M.D.",
-    title: "Family Physician",
-    image: "https://picsum.photos/seed/doc2/400/500",
-    bio: "Dedicated to preventative medicine and women's health initiatives within our community."
-  },
-  {
-    name: "Jamie Perrotti, PA-C",
-    title: "Certified Physician Assistant",
-    image: "https://picsum.photos/seed/pa1/400/500",
-    bio: "Expert in acute care and patient education, ensuring every family member receives personalized attention."
-  },
-  {
-    name: "Wesley L. Coleman, MPAS, PA-C",
-    title: "Certified Physician Assistant",
-    image: "https://picsum.photos/seed/pa2/400/500",
-    bio: "Focuses on chronic disease management and geriatric care with a compassionate approach."
-  },
-  {
-    name: "Anna Parten, PA-C",
-    title: "Certified Physician Assistant",
-    image: "https://picsum.photos/seed/pa3/400/500",
-    bio: "Passionate about pediatric care and adolescent health, bringing a fresh perspective to family medicine."
-  }
-];
+
 
 const services: Service[] = [
   {
@@ -272,50 +235,7 @@ const WhyChooseUs = () => {
   );
 };
 
-const Providers = () => {
-  return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
-            <p className="text-medical-red font-bold uppercase tracking-[0.2em] text-sm mb-4">Our Medical Team</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-medical-slate">Meet Our Providers</h2>
-          </div>
-        </div>
 
-        <div className="flex gap-8 overflow-x-auto pb-12 no-scrollbar snap-x">
-          {providers.map((provider, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="min-w-[320px] md:min-w-[400px] snap-start group"
-            >
-              <div className="relative h-[500px] rounded-[40px] overflow-hidden mb-6">
-                <img 
-                  src={provider.image} 
-                  alt={provider.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-medical-slate/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                <div className="absolute bottom-8 left-8 right-8 text-white">
-                  <p className="text-medical-red font-bold text-xs uppercase tracking-widest mb-2">{provider.title}</p>
-                  <h3 className="text-2xl font-bold">{provider.name}</h3>
-                </div>
-              </div>
-              <p className="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-2">
-                {provider.bio}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 const Resources = () => {
   return (
@@ -355,7 +275,7 @@ export const Home = () => {
       <Hero />
       <Services />
       <WhyChooseUs />
-      <Providers />
+
       <Resources />
     </>
   );
