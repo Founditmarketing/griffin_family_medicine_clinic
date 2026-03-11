@@ -90,23 +90,6 @@ export const CovidInfo = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15 }}
-              className="bg-medical-slate p-10 rounded-[32px] text-white relative overflow-hidden noise-overlay shadow-premium border-double-red"
-            >
-              <div className="relative z-10">
-                <h3 className="text-xl font-bold mb-6">Testing Services</h3>
-                <p className="text-white/60 mb-8 text-sm">
-                  We offer rapid antigen and PCR testing for symptomatic patients and travel requirements.
-                </p>
-                <button className="w-full bg-medical-red py-4 rounded-xl font-bold hover:bg-medical-red-dark transition-all shadow-glow-red hover:-translate-y-1 duration-500">
-                  Schedule a Test
-                </button>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
               className="bg-white p-10 rounded-[32px] shadow-sm border border-gray-100 relative overflow-hidden"
             >
