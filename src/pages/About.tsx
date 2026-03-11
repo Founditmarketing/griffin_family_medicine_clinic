@@ -15,38 +15,41 @@ export const About = () => {
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Story Section */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="mb-24">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="prose prose-lg max-w-none text-gray-600"
           >
-            <p className="text-medical-red font-bold uppercase tracking-widest text-sm mb-4">Our Legacy</p>
-            <h1 className="text-4xl md:text-6xl font-bold text-medical-slate mb-8 leading-tight">
+            <p className="text-medical-red font-bold uppercase tracking-widest text-sm mb-4 not-prose">Our Legacy</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-medical-slate mb-12 leading-tight not-prose">
               A Tradition of Excellence in <span className="text-medical-red">Family Medicine.</span>
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Griffin Family Medicine Clinic was founded with a simple mission: to provide high-quality, compassionate healthcare to the families of Central Louisiana. For over 20 years, we have been a cornerstone of the Cenla community.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Our practice combines the warmth of a family-owned clinic with the cutting-edge technology of modern medicine. We believe that health is not just the absence of disease, but a state of complete physical, mental, and social well-being.
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="relative"
-          >
-            <img 
-              src="https://picsum.photos/seed/about/800/600" 
-              alt="Our Clinic" 
-              className="rounded-[40px] shadow-2xl"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute -bottom-8 -right-8 bg-medical-red p-8 rounded-[32px] text-white shadow-xl hidden md:block">
-              <p className="text-4xl font-bold mb-1">20+</p>
-              <p className="text-sm font-semibold opacity-80 uppercase tracking-wider">Years of Service</p>
+
+            <div className="float-none md:float-right md:w-5/12 ml-0 md:ml-12 mb-8 md:mb-4 relative">
+              <img 
+                src="https://picsum.photos/seed/about/800/600" 
+                alt="Our Clinic" 
+                className="w-full rounded-[40px] shadow-2xl not-prose"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute -bottom-6 -right-6 lg:-bottom-8 lg:-right-8 bg-medical-red p-6 lg:p-8 rounded-[32px] text-white shadow-xl hidden sm:block">
+                <p className="text-3xl lg:text-4xl font-bold mb-1">20+</p>
+                <p className="text-xs lg:text-sm font-semibold opacity-80 uppercase tracking-wider">Years of Service</p>
+              </div>
             </div>
+
+            <p className="leading-relaxed mb-6">
+              Griffin Family Medicine Clinic was founded with a simple mission: to provide high-quality, compassionate healthcare to the families of Central Louisiana. For over two decades, we have been a proud cornerstone of the Cenla community, serving generations of families through every stage of life. Our commitment has always been, and always will be, rooted in a deep understanding of the people we care for.
+            </p>
+            <p className="leading-relaxed mb-6">
+              Our practice combines the warmth of a traditional family-owned clinic with the cutting-edge technology of modern diagnostic medicine. We believe that true health is not just the absence of disease, but a state of complete physical, mental, and social well-being. That means prioritizing both rapid intervention when you are sick, and long-term preventative care when you are well.
+            </p>
+            <p className="leading-relaxed">
+              Every day, our dedicated team of physicians, physician assistants, and nurse practitioners brings decades of combined experience into the exam room. Whether you're visiting for an annual physical, managing a chronic condition, or dropping in for an acute illness, we take the time to listen and tailor our approach to your unique needs. At Griffin Family Medicine, you aren't just a patient chart—you are family.
+            </p>
+            
+            <div className="clear-both"></div>
           </motion.div>
         </div>
 
