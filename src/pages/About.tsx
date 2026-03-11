@@ -53,6 +53,8 @@ export const About = () => {
           </motion.div>
         </div>
 
+        <div className="double-line-divider mb-24 opacity-50" />
+
         {/* Values Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-24">
           {[

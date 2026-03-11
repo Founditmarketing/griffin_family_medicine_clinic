@@ -38,6 +38,20 @@
   @apply bg-white rounded-[40px] shadow-premium hover:shadow-premium-hover transition-all duration-500 border border-gray-100/50 hover:border-gray-200;
 }
 
+.double-line-divider {
+  @apply relative w-full h-px bg-medical-slate/10 my-16 flex items-center justify-center;
+}
+
+.double-line-divider::before {
+  content: '';
+  @apply absolute w-full h-px bg-medical-slate/10 -top-1.5;
+}
+
+.double-line-divider::after {
+  content: '';
+  @apply absolute w-full h-px bg-medical-slate/10 top-1.5;
+}
+
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

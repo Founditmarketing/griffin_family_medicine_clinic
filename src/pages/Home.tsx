@@ -145,6 +145,7 @@ const Services = () => {
   return (
     <section className="py-24 bg-medical-gray">
       <div className="max-w-7xl mx-auto px-6">
+        <div className="double-line-divider mb-24 mt-0 opacity-50" />
         <div className="text-center mb-16">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
