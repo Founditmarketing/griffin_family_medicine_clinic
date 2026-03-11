@@ -337,10 +337,10 @@ const Resources = () => {
                 <Download className="text-white w-10 h-10" />
               </div>
               <h3 className="text-3xl font-bold text-white mb-6">New Patient Paperwork</h3>
-              <button className="bg-white text-medical-slate hover:bg-medical-red hover:text-white px-10 py-5 rounded-2xl font-bold transition-all flex items-center gap-3 mx-auto shadow-xl">
+              <a href="/Griffin_Forms.pdf" target="_blank" rel="noopener noreferrer" download="Griffin_Forms.pdf" className="bg-white text-medical-slate hover:bg-medical-red hover:text-white px-10 py-5 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 mx-auto shadow-xl w-fit">
                 Download PDF Packet
                 <ChevronRight className="w-5 h-5" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
