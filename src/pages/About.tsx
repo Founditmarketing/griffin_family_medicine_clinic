@@ -10,6 +10,7 @@ import imgJamiePerrotti from '../assets/staff/Jamie Perrotti, PA-C.png';
 import imgWesleyColeman from '../assets/staff/Wesley L. Coleman, MPAS, PA-C.png';
 import imgAnnaParten from '../assets/staff/Anna Parten, PA-C.png';
 import imgMeganPaul from '../assets/staff/Megan Paul, NP.png';
+import imgDoctor from '../assets/doctor-02.jpg';
 
 export const About = () => {
   return (
@@ -33,10 +34,9 @@ export const About = () => {
 
             <div className="float-none md:float-right md:w-5/12 ml-0 md:ml-12 mb-8 md:mb-4 relative">
               <img 
-                src="https://picsum.photos/seed/about/800/600" 
+                src={imgDoctor}
                 alt="Our Clinic" 
-                className="w-full rounded-[40px] shadow-2xl not-prose"
-                referrerPolicy="no-referrer"
+                className="w-full rounded-[40px] shadow-2xl not-prose object-cover"
               />
               <div className="absolute -bottom-6 -right-6 lg:-bottom-8 lg:-right-8 bg-medical-red p-6 lg:p-8 rounded-[32px] text-white shadow-xl hidden sm:block">
                 <p className="text-3xl lg:text-4xl font-bold mb-1">20+</p>
