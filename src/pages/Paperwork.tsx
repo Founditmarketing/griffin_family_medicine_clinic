@@ -72,8 +72,9 @@ export const Paperwork = () => {
                   ))}
                 </div>
               </div>
-              <div className="bg-medical-slate p-8 md:p-12 text-white relative overflow-hidden noise-overlay border-double-red">
-                <div className="absolute top-0 left-0 right-0 h-px bg-medical-red/40" />
+              <div className="bg-medical-slate p-8 md:p-12 text-white relative overflow-hidden border-double-red">
+                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.12] pointer-events-none mix-blend-overlay z-0" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-medical-red/40 z-0" />
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
                   <div>
                     <h3 className="text-xl font-bold mb-2">Download All Forms</h3>
