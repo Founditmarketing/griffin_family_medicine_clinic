@@ -99,52 +99,43 @@ const services: Service[] = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-medical-gray -z-10 rounded-l-[100px] hidden lg:block" />
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-medical-red/5 rounded-full blur-3xl -z-10" />
+    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pt-32 pb-24">
+      {/* Background Image covering the entire section */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={imgAllStaff} 
+          alt="Griffin Family Medicine Clinic Staff" 
+          className="w-full h-full object-cover object-top"
+          referrerPolicy="no-referrer"
+        />
+        {/* Dark to transparent gradient overlay to ensure text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-medical-slate/90 via-medical-slate/50 to-transparent" />
+      </div>
       
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-2xl text-white"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-medical-red/10 rounded-full mb-6">
-            <span className="w-2 h-2 bg-medical-red rounded-full animate-pulse" />
-            <span className="text-xs font-bold text-medical-red uppercase tracking-wider">Accepting New Patients</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-medical-red/80 backdrop-blur-sm rounded-full mb-6">
+            <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+            <span className="text-xs font-bold text-white uppercase tracking-wider">Accepting New Patients</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-medical-slate leading-[1.1] mb-6">
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6 drop-shadow-lg">
             Providing Quality <br />
             <span className="text-medical-red">Primary Health Care</span> <br />
             for People in Cenla.
           </h1>
-          <p className="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">
+          <p className="text-lg text-white/90 mb-10 max-w-lg leading-relaxed drop-shadow-md">
             Expert, compassionate medical attention for you and your family. In-person and Telehealth appointments available to fit your schedule.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-medical-red hover:bg-medical-red-dark text-white px-8 py-4 rounded-full font-bold shadow-2xl shadow-medical-red/30 transition-all hover:translate-y-[-2px] flex items-center justify-center gap-2">
+            <Link to="/contact" className="bg-medical-red hover:bg-medical-red-dark text-white px-8 py-4 rounded-full font-bold shadow-2xl shadow-medical-red/30 transition-all hover:translate-y-[-2px] flex items-center justify-center gap-2">
               Book Same-Day Appointment
               <ChevronRight className="w-4 h-4" />
-            </button>
-            <button className="border-2 border-medical-red text-medical-red hover:bg-medical-red hover:text-white px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2">
-              Access 24/7 Live Chat
-            </button>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="relative"
-        >
-          <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl">
-            <img 
-              src={imgAllStaff} 
-              alt="Griffin Family Medicine Clinic Staff" 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
+            </Link>
           </div>
         </motion.div>
       </div>
