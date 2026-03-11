@@ -118,7 +118,7 @@ const Hero = () => {
             for People in Cenla.
           </h1>
           <p className="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">
-            Expert medical attention for you and your family. In-person and Telehealth appointments available to fit your schedule.
+            Expert, compassionate medical attention for you and your family. In-person and Telehealth appointments available to fit your schedule.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="bg-medical-red hover:bg-medical-red-dark text-white px-8 py-4 rounded-full font-bold shadow-2xl shadow-medical-red/30 transition-all hover:translate-y-[-2px] flex items-center justify-center gap-2">
