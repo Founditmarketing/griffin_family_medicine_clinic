@@ -72,7 +72,7 @@ export const Paperwork = () => {
                   ))}
                 </div>
               </div>
-              <div className="bg-medical-slate p-8 md:p-12 text-white relative overflow-hidden noise-overlay">
+              <div className="bg-medical-slate p-8 md:p-12 text-white relative overflow-hidden noise-overlay border-double-red">
                 <div className="absolute top-0 left-0 right-0 h-px bg-medical-red/40" />
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
                   <div>
