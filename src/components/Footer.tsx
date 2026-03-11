@@ -38,18 +38,18 @@ export const Footer = () => {
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <MapPin className="text-medical-red shrink-0" />
-                <span className="text-white/50">145 Yorktown Dr, <br />Alexandria, LA 71303</span>
+                <a href="https://maps.google.com/?q=145+Yorktown+Dr,+Alexandria,+LA+71303" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">145 Yorktown Dr, <br />Alexandria, LA 71303</a>
               </li>
               <li className="flex gap-4">
                 <Phone className="text-medical-red shrink-0" />
-                <div className="text-white/50">
-                  <p>P: (318) 445-8380</p>
+                <div className="text-white/50 flex flex-col gap-1">
+                  <a href="tel:3184458380" className="hover:text-white transition-colors">P: (318) 445-8380</a>
                   <p>F: (318) 445-9753</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <Mail className="text-medical-red shrink-0" />
-                <span className="text-white/50">info@griffinfamily.com</span>
+                <a href="mailto:Griffin_family_medicine@yahoo.com" className="text-white/50 hover:text-white transition-colors break-all">Griffin_family_medicine@yahoo.com</a>
               </li>
             </ul>
           </div>
@@ -64,9 +64,9 @@ export const Footer = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-medical-red text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+                <a href="https://maps.google.com/?q=145+Yorktown+Dr,+Alexandria,+LA+71303" target="_blank" rel="noopener noreferrer" className="bg-medical-red hover:bg-medical-red-dark text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg transition-colors">
                   View on Google Maps
-                </button>
+                </a>
               </div>
             </div>
           </div>

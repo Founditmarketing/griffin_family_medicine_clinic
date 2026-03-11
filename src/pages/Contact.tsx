@@ -68,20 +68,22 @@ export const Contact = () => {
               <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
                 <Phone className="text-medical-red w-8 h-8 mb-6" />
                 <h3 className="font-bold mb-2">Call Us</h3>
-                <p className="text-sm text-gray-500 mb-1">P: (318) 445-8380</p>
+                <a href="tel:3184458380" className="text-sm text-gray-500 hover:text-medical-red transition-colors block mb-1">P: (318) 445-8380</a>
                 <p className="text-sm text-gray-500">F: (318) 445-9753</p>
               </div>
               <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
                 <Mail className="text-medical-red w-8 h-8 mb-6" />
                 <h3 className="font-bold mb-2">Email Us</h3>
-                <p className="text-sm text-gray-500">info@griffinfamily.com</p>
-                <p className="text-sm text-gray-500">billing@griffinfamily.com</p>
+                <a href="mailto:Griffin_family_medicine@yahoo.com" className="text-sm text-gray-500 hover:text-medical-red transition-colors block mb-1 break-all">Griffin_family_medicine@yahoo.com</a>
+                <a href="mailto:billing@griffinfamily.com" className="text-sm text-gray-500 hover:text-medical-red transition-colors block">billing@griffinfamily.com</a>
               </div>
               <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
                 <MapPin className="text-medical-red w-8 h-8 mb-6" />
                 <h3 className="font-bold mb-2">Visit Us</h3>
-                <p className="text-sm text-gray-500">145 Yorktown Dr,</p>
-                <p className="text-sm text-gray-500">Alexandria, LA 71303</p>
+                <a href="https://maps.google.com/?q=145+Yorktown+Dr,+Alexandria,+LA+71303" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-medical-red transition-colors block">
+                  145 Yorktown Dr,<br />
+                  Alexandria, LA 71303
+                </a>
               </div>
               <div className="bg-medical-gray p-8 rounded-[40px] border border-gray-100">
                 <Clock className="text-medical-red w-8 h-8 mb-6" />
@@ -99,10 +101,10 @@ export const Contact = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-white text-medical-slate px-8 py-4 rounded-2xl font-bold shadow-2xl flex items-center gap-2 hover:bg-medical-red hover:text-white transition-all">
+                <a href="https://maps.google.com/?q=145+Yorktown+Dr,+Alexandria,+LA+71303" target="_blank" rel="noopener noreferrer" className="bg-white text-medical-slate px-8 py-4 rounded-2xl font-bold shadow-2xl flex items-center gap-2 hover:bg-medical-red hover:text-white transition-all">
                   Get Directions
                   <ChevronRight className="w-5 h-5" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
