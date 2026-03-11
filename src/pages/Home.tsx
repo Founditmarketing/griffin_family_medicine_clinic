@@ -62,7 +62,7 @@ const services: Service[] = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-medical-gray bg-dot-grid">
+    <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-medical-gray">
       {/* Dynamic Background Elements */}
       <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-medical-red/10 rounded-full blur-[100px] -z-10 animate-pulse" />
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent z-0" />
@@ -145,7 +145,7 @@ const Services = () => {
   return (
     <section className="py-24 bg-white bg-crosshatch">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="double-line-divider mb-24 mt-0 opacity-50" />
+
         <div className="text-center mb-16">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
