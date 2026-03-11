@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import imgAllStaff from '../assets/all-staff.jpg';
 
 // --- Types ---
 interface Provider {
@@ -139,8 +140,8 @@ const Hero = () => {
         >
           <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl">
             <img 
-              src="https://picsum.photos/seed/clinic/800/1000" 
-              alt="Griffin Family Medicine Clinic" 
+              src={imgAllStaff} 
+              alt="Griffin Family Medicine Clinic Staff" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
