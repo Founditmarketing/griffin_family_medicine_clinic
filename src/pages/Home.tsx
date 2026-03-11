@@ -66,10 +66,6 @@ const Hero = () => {
       {/* Dynamic Background Elements */}
       <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-medical-red/10 rounded-full blur-[100px] -z-10 animate-pulse" />
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent z-0" />
-
-      {/* Corner decorative accents */}
-      <div className="absolute top-32 left-8 w-20 h-20 border-l-2 border-t-2 border-medical-red/20 rounded-tl-3xl pointer-events-none" />
-      <div className="absolute bottom-16 right-8 w-20 h-20 border-r-2 border-b-2 border-medical-red/20 rounded-br-3xl pointer-events-none" />
       
       <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
         
@@ -215,17 +211,13 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="bg-medical-red py-20 overflow-hidden relative bg-dot-grid-red">
+    <section className="bg-medical-red py-20 overflow-hidden relative">
       {/* Top and bottom border lines */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
       <div className="absolute top-0 right-0 opacity-10">
         <Heart size={400} className="text-white" />
-      </div>
-      {/* Diagonal decorative line */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute w-[200%] h-[2px] bg-white/10 rotate-[-8deg] top-1/3" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -258,7 +250,7 @@ const Resources = () => {
   return (
     <section id="paperwork" className="py-24 bg-medical-gray bg-dot-grid overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-white rounded-[60px] overflow-hidden shadow-premium border border-gray-100/50 flex flex-col lg:flex-row">
+        <div className="bg-white rounded-[60px] overflow-hidden shadow-premium border-2 border-medical-red/30 flex flex-col lg:flex-row">
           <div className="lg:w-1/2 p-12 md:p-20 relative overflow-hidden">
             {/* Soft background glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-medical-red/5 rounded-full blur-3xl -z-10" />
