@@ -38,6 +38,7 @@ export const Footer = () => {
               <li><Link to="/" className="hover:text-medical-red transition-colors">Home</Link></li>
               <li><Link to="/covid-19" className="hover:text-medical-red transition-colors">COVID-19 Info</Link></li>
               <li><Link to="/about" className="hover:text-medical-red transition-colors">About Us</Link></li>
+              <li><Link to="/expertise" className="hover:text-medical-red transition-colors">Our Expertise</Link></li>
               <li><Link to="/paperwork" className="hover:text-medical-red transition-colors">Patient Paperwork</Link></li>
               <li><Link to="/reviews" className="hover:text-medical-red transition-colors">Reviews</Link></li>
             </ul>

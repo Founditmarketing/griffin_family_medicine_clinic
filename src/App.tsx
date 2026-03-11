@@ -12,6 +12,7 @@ import { CovidInfo } from './pages/CovidInfo.tsx';
 import { About } from './pages/About.tsx';
 import { Paperwork } from './pages/Paperwork.tsx';
 import { Reviews } from './pages/Reviews.tsx';
+import { Expertise } from './pages/Expertise.tsx';
 import { Contact } from './pages/Contact.tsx';
 
 // Scroll to top on route change
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/covid-19" element={<CovidInfo />} />
             <Route path="/about" element={<About />} />
+            <Route path="/expertise" element={<Expertise />} />
             <Route path="/paperwork" element={<Paperwork />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/contact" element={<Contact />} />

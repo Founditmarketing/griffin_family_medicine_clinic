@@ -17,6 +17,7 @@ export const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'COVID-19', href: '/covid-19' },
     { name: 'About', href: '/about' },
+    { name: 'Expertise', href: '/expertise' },
     { name: 'Paperwork', href: '/paperwork' },
     { name: 'Reviews', href: '/reviews' },
     { name: 'Contact', href: '/contact' },
