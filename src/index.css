@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  /* A slightly more sophisticated, deeper crimson */
+  --color-medical-red: #bb132a;
+  --color-medical-red-dark: #8b0000;
+  /* A warmer, softer gray background */
+  --color-medical-gray: #fdfcfb;
+  /* Deeper slate for sharper contrast */
+  --color-medical-slate: #0f1214;
+
+  --shadow-premium: var(--shadow-sm), 0 20px 40px -10px rgba(0, 0, 0, 0.08), 0 10px 20px -5px rgba(0, 0, 0, 0.04);
+  --shadow-premium-hover: var(--shadow-md), 0 30px 60px -15px rgba(0, 0, 0, 0.12), 0 15px 30px -10px rgba(0, 0, 0, 0.06);
+  --shadow-glow-red: 0 0 40px -10px rgba(187, 19, 42, 0.5);
+}
+
+@layer base {
+  body {
+    @apply font-sans text-medical-slate bg-white antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-premium;
+}
+
+.glass-dark {
+  @apply bg-medical-slate/80 backdrop-blur-xl border border-white/10 shadow-premium;
+}
+
+.premium-card {
+  @apply bg-white rounded-[40px] shadow-premium hover:shadow-premium-hover transition-all duration-500 border border-gray-100/50 hover:border-gray-200;
+}
+
+.double-line-divider {
+  @apply relative w-full h-px bg-medical-slate/10 my-16 flex items-center justify-center;
+}
+
+.double-line-divider::before {
+  content: '';
+  @apply absolute w-full h-px bg-medical-slate/10 -top-1.5;
+}
+
+.double-line-divider::after {
+  content: '';
+  @apply absolute w-full h-px bg-medical-slate/10 top-1.5;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Custom scrollbar for providers section */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* === Texture & Pattern Backgrounds === */
+
+/* Subtle dot grid */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, rgba(15, 18, 20, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Red-tinted dot grid for red sections */
+.bg-dot-grid-red {
+  background-image: radial-gradient(circle, rgba(187, 19, 42, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* White dot grid for dark sections */
+.bg-dot-grid-white {
+  background-image: radial-gradient(circle, rgba(255,255,255, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Fine cross-hatch lines */
+.bg-crosshatch {
+  background-image:
+    linear-gradient(rgba(15, 18, 20, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 18, 20, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Diagonal stripe (like Expertise) */
+.bg-diagonal-stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(187, 19, 42, 0.03) 40px,
+    rgba(187, 19, 42, 0.03) 41px
+  );
+}
+
+/* Noise overlay (apply as pseudo-element parent) */
+.noise-overlay {
+  position: relative;
+}
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.18;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+.noise-overlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section gradient fade-in from the top */
+.section-fade-top {
+  background: linear-gradient(to bottom, rgba(253,252,251,0) 0%, rgba(253,252,251,1) 120px);
+}
+
+/* Decorative side rule — red left border accent */
+.accent-border-left {
+  border-left: 3px solid #bb132a;
+  padding-left: 1rem;
+}
+
+/* Page hero pattern — for inner page headers */
+.page-hero-bg {
+  background-color: #fdfcfb;
+  background-image:
+    radial-gradient(circle, rgba(15, 18, 20, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Double red border for dark sections */
+.border-double-red {
+  border: 4px double rgba(187, 19, 42, 0.55);
+}
+
+/* Double red border — top edge only (footer etc.) */
+.border-t-double-red {
+  border-top: 4px double rgba(187, 19, 42, 0.65);
+}
