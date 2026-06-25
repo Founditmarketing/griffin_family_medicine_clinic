@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Download, FileText, CheckCircle, Clock } from 'lucide-react';
+import { Download, FileText, CheckCircle, Clock, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Paperwork = () => {
@@ -10,6 +10,21 @@ export const Paperwork = () => {
     { name: "HIPAA Privacy Notice", size: "420 KB", type: "PDF" },
     { name: "Insurance Authorization", size: "310 KB", type: "PDF" },
     { name: "Telehealth Consent Form", size: "540 KB", type: "PDF" },
+  ];
+
+  const insuranceDocs = [
+    {
+      name: "Medicare Bridge Requirements",
+      description: "Coverage requirements and guidelines for Medicare Bridge patients.",
+      pdf: "/GFM Medicare Bridge.pdf",
+      docx: "/Griffin Medicare Bridge Requirements.docx",
+    },
+    {
+      name: "GLP-1 Weight Loss Medication Insurance Requirements",
+      description: "Insurance criteria and documentation needed for GLP-1 weight loss medications.",
+      pdf: "/GLP-1 Weight Loss Medication Insurance Requirements (1) (1).pdf",
+      docx: "/GLP-1 Weight Loss Medication Insurance Requirements.docx",
+    },
   ];
 
   return (
@@ -90,6 +105,47 @@ export const Paperwork = () => {
           </div>
 
           <div className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              className="rounded-2xl border border-gray-200 bg-medical-gray p-6"
+            >
+              <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 mb-1 flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4" />
+                Insurance &amp; Medication Resources
+              </h3>
+              <p className="text-xs text-gray-400 italic mb-4">For reference only — no need to print or bring to your appointment.</p>
+              <div className="space-y-2">
+                {insuranceDocs.map((doc, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-between gap-4 px-4 py-3 bg-white rounded-xl border border-gray-100"
+                  >
+                    <span className="text-sm font-medium text-medical-slate">{doc.name}</span>
+                    <div className="flex gap-2 shrink-0">
+                      <a
+                        href={doc.pdf}
+                        download
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-bold text-gray-500 hover:border-medical-red hover:text-medical-red transition-all duration-200"
+                      >
+                        <Download className="w-3 h-3" />
+                        PDF
+                      </a>
+                      <a
+                        href={doc.docx}
+                        download
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-lg border border-gray-200 text-xs font-bold text-gray-500 hover:border-medical-red hover:text-medical-red transition-all duration-200"
+                      >
+                        <Download className="w-3 h-3" />
+                        Word
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
